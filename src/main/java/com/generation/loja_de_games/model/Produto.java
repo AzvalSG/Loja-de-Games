@@ -18,27 +18,27 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-//	@NotBlank(message = "Esse é um campo obrigatório!")
+
 	@Size(min = 5, max = 255, message = "Limite de caracteres 255")
 	private String nomeprod;
 
-//	@NotBlank(message = "Esse é um campo obrigatório!")
+
 	@Size(min = 5, max = 255, message = "Limite de caracteres 255")
 	private String descricaoprod;
 
 	
-//	@NotBlank(message = "Esse é um campo obrigatório!")
+
 	private int quantidadeprod;
 	
-//	@NotBlank(message = "Esse é um campo obrigatório!")
+
 	private int precoprod;
 	
-//	@NotBlank(message = "Esse é um campo obrigatório!")
+
 	private String validadeprod;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("Produto")
-	private Categoria categorias;
+	private Categoria categoria;
 
 	public Long getId() {
 		return id;
@@ -89,11 +89,11 @@ public class Produto {
 	}
 
 	public Categoria getCategorias() {
-		return categorias;
+		return categoria;
 	}
 
-	public void setCategorias(Categoria categorias) {
-		this.categorias = categorias;
+	public void setCategorias(Categoria categoria) {
+		this.categoria = categoria;
 	}
 	
 

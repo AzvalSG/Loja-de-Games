@@ -21,11 +21,11 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-//	@NotBlank(message = "Esse é um campo obrigatório!")
+
 	@Size(min = 5, max = 255, message = "Limite de caracteres 255")
 	private String descricaocat;
 
-//	@NotBlank(message = "Esse é um campo obrigatório!")
+
 	@Size(min = 5, max = 255, message = "Limite de caracteres 255")
 	private String nomecat;
 
